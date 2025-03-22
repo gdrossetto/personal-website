@@ -1,4 +1,9 @@
 import "./App.css";
+import animationData from "./assets/animation.json";
+import Lottie from "lottie-react";
+import booking from "./assets/booking.png";
+import itau from "./assets/itau.png";
+import revelare from "./assets/revelare.png";
 
 function Header() {
   return (
@@ -6,16 +11,16 @@ function Header() {
       <div className="text-green-400 font-bold">Gabriel Rossetto</div>
       <nav className="space-x-4">
         <a href="#about" className="text-gray-400 hover:text-green-400">
-          01. About
+          About
         </a>
         <a href="#experience" className="text-gray-400 hover:text-green-400">
-          02. Experience
+          Experience
         </a>
         <a href="#work" className="text-gray-400 hover:text-green-400">
-          03. Work
+          Work
         </a>
         <a href="#contact" className="text-gray-400 hover:text-green-400">
-          04. Contact
+          Contact
         </a>
         <button className="border border-green-400 px-4 py-2 text-green-400 hover:bg-green-400 hover:text-gray-900">
           Resume
@@ -27,7 +32,7 @@ function Header() {
 
 function Hero({ scrollToSection }: { scrollToSection: () => void }) {
   return (
-    <section className="px-12 py-24 flex items-center">
+    <section className="px-24 py-24 flex items-center justify-between">
       <div className="w-max">
         <p className="text-green-400 mb-4">Hi, my name is</p>
         <h1 className="text-5xl font-bold">Gabriel Rossetto</h1>
@@ -35,17 +40,23 @@ function Hero({ scrollToSection }: { scrollToSection: () => void }) {
           I build things for the web.
         </h2>
         <p className="text-gray-400 max-w-lg mt-4">
-          I'm a software engineer specializing in building (and occasionally
-          designing) exceptional digital experiences. Currently, I'm focused on
-          building accessible, human-centered products at{" "}
-          <span className="text-green-400">Upstatement</span>.
+          I'm a passionate software engineer dedicated to building elegant and
+          efficient web experiences. With a background in frontend and backend
+          development, I thrive on solving complex problems and crafting
+          user-friendly applications. Currently, I’m contributing to innovative
+          solutions at
+          <span className="text-green-400"> Booking.com</span>.
         </p>
+
         <button
           onClick={scrollToSection}
-          className="border border-green-400 px-6 py-3 mt-6 text-green-400 hover:bg-green-400 hover:text-gray-900"
+          className="border border-green-400 px-6 py-3 mt-6 text-green-400 hover:bg-green-400 hover:text-gray-900 cursor-pointer"
         >
-          Check out my course!
+          Check out my work experience
         </button>
+      </div>
+      <div>
+        <Lottie className="w-100" animationData={animationData} loop={true} />
       </div>
     </section>
   );
@@ -63,8 +74,13 @@ function CompanyCard({
   logo: string;
 }) {
   return (
-    <article className="bg-white text-gray-900 p-6 rounded-lg shadow-lg">
-      <img src={logo} alt={name} className="w-20 h-20 mb-4" />
+    <article className="bg-white text-center text-gray-900 p-6 rounded-lg shadow-lg">
+      <img
+        src={logo}
+        alt={name}
+        className="w-30 h-20 mb-8 mx-auto object-contain"
+      />
+      <hr className="border border-green-400 mb-8" />
       <h3 className="text-xl font-bold">{name}</h3>
       <p className="text-gray-600">{role}</p>
       <p className="text-gray-500 mt-2">{description}</p>
@@ -83,7 +99,7 @@ function CompaniesSection({
   }[];
 }) {
   return (
-    <section id="companies-section" className="mt-16 bg-white p-12">
+    <section id="companies-section" className="mt-16 bg-white py-12 px-24">
       <h2 className="text-3xl font-bold mb-8">Some of my previous companies</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {companies.map((company, index) => (
@@ -101,21 +117,21 @@ function App() {
       role: "Software Engineer",
       description:
         "Maintaining core user journey microfrontends and APIs. Developing new features and improving services. Working with ReactJS and NodeJS on AWS.",
-      logo: "https://via.placeholder.com/150",
+      logo: booking,
     },
     {
-      name: "Zup Innovation",
+      name: "Zup Innovation + Itaú",
       role: "Software Engineer",
       description:
         "Modernized digital services for Latin America's largest bank. Developed frontend applications with ReactJS and Angular. Maintained Kotlin backend services.",
-      logo: "https://via.placeholder.com/150",
+      logo: itau,
     },
     {
       name: "Revelare",
       role: "Software Engineer",
       description:
         "Built websites, hybrid mobile apps, and enterprise systems. Used technologies like ReactJS, React Native, Angular, and Vue.",
-      logo: "https://via.placeholder.com/150",
+      logo: revelare,
     },
   ];
 
