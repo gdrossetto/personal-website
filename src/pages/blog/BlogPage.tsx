@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 import { Header } from "../../components/Header.tsx";
 import { Footer } from "../../components/Footer.tsx";
+import { adminBaseUrl } from "../../App.tsx";
 
 const BlogPage = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(
-      "http://192.241.159.160:1337/api/blog-posts?sort=publishedAt:desc&populate=*",
-    )
+    fetch(`${adminBaseUrl}/api/blog-posts?sort=publishedAt:desc&populate=*`)
       .then((res) => res.json())
       .then((data) => {
         setPosts(data.data);
@@ -52,7 +51,7 @@ const BlogPage = () => {
                     className="bg-white rounded-lg shadow-md overflow-hidden"
                   >
                     <img
-                      src={`http://192.241.159.160:1337${post.thumbnail.formats.large.url}`}
+                      src={`${adminBaseUrl}${post.thumbnail.formats.large.url}`}
                       alt={post.titulo}
                       className="w-full h-48 object-cover"
                     />

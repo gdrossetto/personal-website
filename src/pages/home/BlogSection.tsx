@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import BlogCard from "../../components/BlogCard.tsx";
+import { adminBaseUrl } from "../../App.tsx";
 
 const BlogSection = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     fetch(
-      "http://192.241.159.160:1337/api/blog-posts?sort=publishedAt:desc&pagination[limit]=3&populate=*",
+      `${adminBaseUrl}/api/blog-posts?sort=publishedAt:desc&pagination[limit]=3&populate=*`,
     )
       .then((res) => res.json())
       .then((data) => setPosts(data.data))

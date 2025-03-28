@@ -3,6 +3,8 @@ import HomePage from "./pages/home/HomePage.tsx";
 import BlogPage from "./pages/blog/BlogPage.tsx";
 import BlogPostPage from "./pages/blog/BlogPostPage.tsx";
 
+export const adminBaseUrl = "https://gabrielrossetto.dev";
+
 function App() {
   return (
     <>

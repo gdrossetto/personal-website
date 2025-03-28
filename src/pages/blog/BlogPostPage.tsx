@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Header } from "../../components/Header.tsx";
 import { Footer } from "../../components/Footer.tsx";
+import { adminBaseUrl } from "../../App.tsx";
 
 const BlogPostPage = () => {
   const { documentId } = useParams();
@@ -10,7 +11,7 @@ const BlogPostPage = () => {
 
   useEffect(() => {
     // Fetch the single blog post using the documentId
-    fetch(`http://192.241.159.160:1337/api/blog-posts/${documentId}?populate=*`)
+    fetch(`${adminBaseUrl}/api/blog-posts/${documentId}?populate=*`)
       .then((res) => res.json())
       .then((data) => {
         setPost(data?.data as any);
@@ -52,7 +53,7 @@ const BlogPostPage = () => {
           dangerouslySetInnerHTML={{
             __html: post.conteudo.replace(
               /(http:\/\/192\.241\.159\.160:1337\/uploads\/[\w\d\-_]+\.(?:png|jpg|jpeg|gif|bmp|webp))/g,
-              (match) => {
+              (match: any) => {
                 // Ensure all image links are complete and can be rendered
                 return `<img src="${match}" class="w-full mb-6" alt="Blog Post Image" />`;
               },
