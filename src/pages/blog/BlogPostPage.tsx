@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Header } from "../../components/Header.tsx";
 import { Footer } from "../../components/Footer.tsx";
 import { adminBaseUrl } from "../../App.tsx";
+import parse from "html-react-parser";
 
 const BlogPostPage = () => {
   const { documentId } = useParams();
@@ -48,24 +49,13 @@ const BlogPostPage = () => {
         <p className="text-gray-600 text-sm mb-4">
           {new Date(post.data).toLocaleDateString()}
         </p>
-        <div
-          className="text-gray-700 mb-6"
-          dangerouslySetInnerHTML={{
-            __html: post.conteudo.replace(
-              /(http:\/\/192\.241\.159\.160:1337\/uploads\/[\w\d\-_]+\.(?:png|jpg|jpeg|gif|bmp|webp))/g,
-              (match: any) => {
-                // Ensure all image links are complete and can be rendered
-                return `<img src="${match}" class="w-full mb-6" alt="Blog Post Image" />`;
-              },
-            ),
-          }}
-        />
-        <a
-          href="/blog"
-          className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
-        >
-          Voltar para o Blog
-        </a>
+        <div className="ck-content">{parse(post.conteudo)}</div>
+        {/*<a*/}
+        {/*  href="/blog"*/}
+        {/*  className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"*/}
+        {/*>*/}
+        {/*  Voltar para o Blog*/}
+        {/*</a>*/}
       </div>
       <Footer />
     </>
