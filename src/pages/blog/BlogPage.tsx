@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Header } from "../../components/Header.tsx";
 import { Footer } from "../../components/Footer.tsx";
 import { adminBaseUrl } from "../../App.tsx";
+import BlogCard from "../../components/BlogCard.tsx";
 
 const BlogPage = () => {
   const [posts, setPosts] = useState([]);
@@ -46,31 +47,7 @@ const BlogPage = () => {
                     </div>
                   ))
               : posts.map((post: any) => (
-                  <div
-                    key={post.id}
-                    className="bg-white rounded-lg shadow-md overflow-hidden"
-                  >
-                    <img
-                      src={`${adminBaseUrl}${post.thumbnail.formats.large.url}`}
-                      alt={post.titulo}
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-4">
-                      <h3 className="text-xl font-semibold text-gray-900">
-                        {post.titulo}
-                      </h3>
-                      <p className="text-gray-600 text-sm">
-                        {new Date(post.data).toLocaleDateString()}
-                      </p>
-                      <p className="text-gray-700 mt-2">{post.resumo}</p>
-                      <a
-                        href={`/blog/${post.documentId}`}
-                        className="inline-block mt-4 text-green-600 hover:underline"
-                      >
-                        Leia mais
-                      </a>
-                    </div>
-                  </div>
+                  <BlogCard post={post} key={post.id} />
                 ))}
           </div>
         </div>

@@ -45,11 +45,15 @@ const BlogPostPage = () => {
     <>
       <Header />
       <div className="max-w-3xl mx-auto py-12 px-6">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">{post.titulo}</h1>
-        <p className="text-gray-600 text-sm mb-4">
-          {new Date(post.data).toLocaleDateString()}
+        <h1 className="font-bold text-gray-900 font-mono text-5xl mb-4 tracking-tight">
+          {post.titulo}
+        </h1>
+        <p className="text-gray-600 text-md mb-4">{post.resumo}</p>
+        <p className="text-gray-600 text-sm">
+          Publicado em {new Date(post.data).toLocaleDateString()}
         </p>
-        <div className="ck-content">{parse(post.conteudo)}</div>
+        <hr className="border-1 border-green-400 mt-8" />
+        <div className="ck-content py-8">{parse(post.conteudo)}</div>
         {/*<a*/}
         {/*  href="/blog"*/}
         {/*  className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"*/}

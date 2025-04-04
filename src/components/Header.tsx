@@ -38,7 +38,7 @@ export function Header() {
         <a href="#experience" className="text-white hover:text-green-400">
           Quem Somos
         </a>
-        <button className="border border-green-400 px-4 py-2 text-green-400 hover:bg-green-400 hover:text-gray-900">
+        <button className="border border-green-400 px-4 py-2 text-green-400 hover:bg-green-400 hover:text-gray-900 rounded-sm">
           Contato
         </button>
       </nav>
