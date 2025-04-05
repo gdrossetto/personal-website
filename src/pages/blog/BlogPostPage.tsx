@@ -44,10 +44,13 @@ const BlogPostPage = () => {
   return (
     <>
       <Header />
-      <div className="max-w-3xl mx-auto py-12 px-6">
+      <article className="max-w-3xl mx-auto py-12 px-6">
         <h1 className="font-bold text-gray-900 font-mono text-5xl mb-4 tracking-tight">
           {post.titulo}
         </h1>
+        <title>{post.titulo}</title>
+        <meta property="og:description" content={post.resumo} />
+        <meta property="og:image" content={post.thumbnail.url} />
         <p className="text-gray-600 text-md mb-4">{post.resumo}</p>
         <p className="text-gray-600 text-sm">
           Publicado em {new Date(post.data).toLocaleDateString()}
@@ -60,7 +63,7 @@ const BlogPostPage = () => {
         {/*>*/}
         {/*  Voltar para o Blog*/}
         {/*</a>*/}
-      </div>
+      </article>
       <Footer />
     </>
   );

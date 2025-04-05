@@ -6,6 +6,7 @@ import { Solutions } from "./Solutions.tsx";
 import BlogSection from "./BlogSection.tsx";
 import { Header } from "../../components/Header.tsx";
 import { Footer } from "../../components/Footer.tsx";
+import Values from "./Values.tsx";
 
 function HomePage() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function HomePage() {
     <div>
       <Header />
       <Hero scrollToSection={scrollToSection} />
+      <Values />
       <Solutions />
       <BlogSection />
       <Footer />

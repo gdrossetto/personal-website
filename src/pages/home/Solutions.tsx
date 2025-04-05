@@ -1,64 +1,59 @@
-import solutions1 from "../../assets/solutions1.jpg";
-import solutions2 from "../../assets/digitalmarketing.jpg";
-import solutions3 from "../../assets/responsive.jpg";
+import { ShieldCheck, UserRoundSearch, Lightbulb } from "lucide-react";
 
 export const Solutions = () => {
-  const services = [
+  const features = [
     {
-      title: "Desenvolvimento de Websites Personalizados",
+      icon: <ShieldCheck className="text-green-400 w-8 h-8" />,
+      title: "Excelência Técnica",
       description:
-        "Crie uma presença online forte com um site moderno, responsivo e otimizado. Desenvolvido sob medida para atender às necessidades específicas do seu negócio.",
-      image: solutions1,
+        "Priorizamos um código limpo e eficiente, garantindo aplicações rápidas e confiáveis.",
     },
     {
-      title: "Landing Pages para Campanhas",
+      icon: <UserRoundSearch className="text-green-400 w-8 h-8" />,
+      title: "Abordagem Focada no Cliente",
       description:
-        "Aumente suas conversões com landing pages personalizadas. Ideal para lançamentos de produtos, eventos e campanhas de marketing.",
-      image: solutions2,
+        "O seu sucesso é o nosso sucesso. Trabalhamos lado a lado para entender e alcançar seus objetivos.",
     },
     {
-      title: "Otimização e Manutenção de Sites",
+      icon: <Lightbulb className="text-green-400 w-8 h-8" />,
+      title: "Soluções Inovadoras",
       description:
-        "Garanta o melhor desempenho do seu site. Realizamos otimizações para aumentar a velocidade, melhorar o SEO e garantir uma experiência impecável.",
-      image: solutions3,
+        "Estamos sempre à frente das tendências tecnológicas para oferecer soluções de ponta para o seu negócio.",
     },
     {
-      title: "Consultoria em Desenvolvimento Web",
+      icon: <ShieldCheck className="text-green-400 w-8 h-8" />,
+      title: "Excelência Técnica",
       description:
-        "Precisa de orientação técnica para seu projeto? Com nossa consultoria, você terá apoio especializado para tomar as melhores decisões em tecnologia.",
-      image: solutions1,
+        "Priorizamos um código limpo e eficiente, garantindo aplicações rápidas e confiáveis.",
     },
   ];
 
   return (
-    <section id="solucoes" className="px-6 md:px-24 py-24">
-      <h2 className="mb-24 text-center font-mono text-6xl font-bold text-gray-900 tracking-tight">
-        Nossas Soluções_
+    <section
+      id="solucoes"
+      className="bg-[#0A1124] text-center px-6 md:px-24 py-24"
+    >
+      <h2 className="text-6xl font-bold text-white mb-4 font-mono tracking-tight">
+        Nossas <span className="neon-text">Soluções_</span>
       </h2>
-
-      <div className="flex flex-col gap-16">
-        {services.map((service, index) => (
+      <p className="text-white max-w-2xl mx-auto mb-12">
+        Oferecemos uma ampla gama de serviços digitais para ajudar sua empresa a
+        prosperar online. De desenvolvimento web a estratégias digitais, temos
+        tudo o que você precisa.
+      </p>
+      <div className="flex flex-wrap justify-center gap-4">
+        {features.map((feature, index) => (
           <div
-            data-aos="fade-up"
             key={index}
-            className={`mb-18 flex flex-col md:flex-row ${
-              index % 2 === 0 ? "md:flex-row-reverse" : ""
-            } items-center`}
+            className="flex flex-col items-center text-center neon-border-only w-full sm:w-2/5 lg:w-2/5 p-8"
           >
-            <img
-              src={service.image}
-              alt={service.title}
-              className="w-full md:w-1/2 object-cover rounded-lg"
-            />
-            <div className="w-full md:w-1/2 p-8">
-              <h3 className="text-3xl md:text-5xl font-bold mb-4 font-mono tracking-tight">
-                {service.title}
-              </h3>
-              <hr className="border-2 border-green-400 my-8 w-1/2" />
-              <p className="text-gray-400 font-normal text-lg md:text-2xl">
-                {service.description}
-              </p>
+            <div className="bg-[#0A1124] p-4 rounded-full mb-4">
+              {feature.icon}
             </div>
+            <h3 className="text-2xl font-semibold neon-text mb-2">
+              {feature.title}
+            </h3>
+            <p className="text-white">{feature.description}</p>
           </div>
         ))}
       </div>
