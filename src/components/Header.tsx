@@ -28,7 +28,7 @@ export function Header() {
       {/* Navigation */}
       <nav
         className={`${
-          isOpen ? "flex border-b neon-border" : "hidden"
+          isOpen ? "flex border-b neon-border-only" : "hidden"
         } md:flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 
     fixed md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-[#0A1124] md:bg-transparent p-6 md:p-0 z-40 px-6 md:px-24`} // Add px-6 and md:px-24 for padding
       >
