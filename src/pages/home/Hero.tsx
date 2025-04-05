@@ -20,7 +20,7 @@ export function Hero({ scrollToSection }) {
           </p>
           <div className="mt-6 flex gap-4">
             <a
-              href="#contact"
+              href="https://wa.link/r9j769"
               className="px-6 py-3 border-2 neon-border font-semibold rounded-lg transition neon-text"
             >
               Entrar em Contato

@@ -10,7 +10,7 @@ const Values = () => {
   ];
 
   return (
-    <section id="solucoes" className="px-6 md:px-24 py-24">
+    <section id="sobre" className="px-6 md:px-24 py-24">
       <div className="flex flex-col gap-16">
         {services.map((service, index) => (
           <div
