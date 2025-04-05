@@ -2,8 +2,9 @@ import values1 from "../../assets/solutions1.jpg";
 const Values = () => {
   const services = [
     {
-      title: "Excelência Técnica",
-      description: "Criamos sites responsivos e otimizados para o seu negócio.",
+      title: "Sobre a GR",
+      description:
+        "Na GR Web Solutions, somos apaixonados por criar sites inovadores e funcionais que ajudam nossos clientes a se destacar no mundo digital. Combinando design moderno e tecnologia de ponta, oferecemos soluções personalizadas para atender às necessidades específicas de cada projeto, desde o desenvolvimento até a otimização contínua.",
       image: values1,
     },
   ];
@@ -29,7 +30,7 @@ const Values = () => {
                 {service.title}
               </h3>
               <hr className="border-2 border-green-400 my-8 w-1/2" />
-              <p className="text-gray-400 font-normal text-lg md:text-2xl">
+              <p className="text-gray-600 font-normal text-lg md:text-2xl">
                 {service.description}
               </p>
             </div>
