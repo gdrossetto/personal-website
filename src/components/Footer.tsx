@@ -29,17 +29,17 @@ export const Footer = () => {
           <h3 className="text-lg font-semibold text-green-400">Empresa</h3>
           <ul className="mt-4 space-y-2">
             <li>
-              <a href="#about" className="hover:text-green-400">
+              <a href="#solucoes" className="hover:text-green-400">
                 Soluções
               </a>
             </li>
             <li>
-              <a href="#services" className="hover:text-green-400">
+              <a href="#sobre" className="hover:text-green-400">
                 Quem Somos
               </a>
             </li>
             <li>
-              <a href="#portfolio" className="hover:text-green-400">
+              <a href="https://wa.link/r9j769" className="hover:text-green-400">
                 Contato
               </a>
             </li>
@@ -54,7 +54,7 @@ export const Footer = () => {
           <ul className="mt-4 space-y-2">
             <li className="flex items-center gap-3">
               <FaWhatsapp className="text-green-400" />
-              <a href="#" className="hover:text-green-400">
+              <a href="https://wa.link/r9j769" className="hover:text-green-400">
                 WhatsApp
               </a>
             </li>

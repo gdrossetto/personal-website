@@ -1,30 +1,49 @@
-import { ShieldCheck, UserRoundSearch, Lightbulb } from "lucide-react";
+import {
+  FileBox,
+  Building2,
+  BookOpenText,
+  ShoppingCart,
+  TrendingUp,
+  Wrench,
+} from "lucide-react";
 
 export const Solutions = () => {
   const features = [
     {
-      icon: <ShieldCheck className="text-green-400 w-8 h-8" />,
-      title: "Excelência Técnica",
+      icon: <FileBox className="text-green-400 w-10 h-10" />,
+      title: "Landing Pages Otimizadas",
       description:
-        "Priorizamos um código limpo e eficiente, garantindo aplicações rápidas e confiáveis.",
+        "Criamos landing pages rápidas, responsivas e com alto foco em conversão, ideais para campanhas, produtos e geração de leads.",
     },
     {
-      icon: <UserRoundSearch className="text-green-400 w-8 h-8" />,
-      title: "Abordagem Focada no Cliente",
+      icon: <Building2 className="text-green-400 w-10 h-10" />,
+      title: "Sites Institucionais Profissionais",
       description:
-        "O seu sucesso é o nosso sucesso. Trabalhamos lado a lado para entender e alcançar seus objetivos.",
+        "Apresente sua empresa com um site moderno, responsivo e que transmita autoridade. Layouts personalizados e gestão fácil de conteúdo.",
     },
     {
-      icon: <Lightbulb className="text-green-400 w-8 h-8" />,
-      title: "Soluções Inovadoras",
+      icon: <BookOpenText className="text-green-400 w-10 h-10" />,
+      title: "Blogs Pessoais/Corporativos",
       description:
-        "Estamos sempre à frente das tendências tecnológicas para oferecer soluções de ponta para o seu negócio.",
+        "Conecte-se com seu público por meio de conteúdo. Implementamos blogs com design integrado e foco em SEO.",
     },
     {
-      icon: <ShieldCheck className="text-green-400 w-8 h-8" />,
-      title: "Excelência Técnica",
+      icon: <ShoppingCart className="text-green-400 w-10 h-10" />,
+      title: "Lojas Virtuais Personalizadas",
       description:
-        "Priorizamos um código limpo e eficiente, garantindo aplicações rápidas e confiáveis.",
+        "Desenvolvemos e-commerces com checkout seguro, integração com pagamentos e ferramentas de gestão de pedidos e estoque.",
+    },
+    {
+      icon: <TrendingUp className="text-green-400 w-10 h-10" />,
+      title: "Otimização SEO",
+      description:
+        "Aumente sua visibilidade no Google com otimizações técnicas, conteúdo estratégico e melhoria de performance.",
+    },
+    {
+      icon: <Wrench className="text-green-400 w-10 h-10" />,
+      title: "Manutenção e Suporte Técnico",
+      description:
+        "Oferecemos planos de manutenção para manter seu site sempre atualizado, seguro e funcionando perfeitamente.",
     },
   ];
 

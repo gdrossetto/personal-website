@@ -36,38 +36,22 @@ const BlogSection = () => {
     //     </a>
     //   </div>
     // </section>
-    <section className="py-20 bg-[#f7f9fc]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 font-mono tracking-tight">
-            Nossos Últimos <span className="neon-blue">Insights</span>
-          </h2>
-          <a
-            href="/blog"
-            className="neon-blue font-medium hover:underline flex items-center gap-1"
-          >
-            Ver todos os artigos
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </a>
-        </div>
-
+    <section className="py-18 bg-[#f7f9fc]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center">
+        <h2 className="text-6xl font-bold text-gray-900 font-mono tracking-tight mb-18 text-center">
+          Nossos Últimos <span className="neon-blue">Insights</span>
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {posts.map((post: any) => (
             <BlogCard key={post.id} post={post} />
           ))}
         </div>
+        <a
+          href="/blog"
+          className="block mt-12 px-6 py-3 border-2 border-[#0A1124] text-[#0A1124] font-semibold rounded-lg hover:bg-[#0A1124] hover:text-white transition"
+        >
+          Ver todos os artigos
+        </a>
       </div>
     </section>
   );
