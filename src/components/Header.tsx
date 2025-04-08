@@ -38,9 +38,14 @@ export function Header() {
         <a href="#sobre" className="text-white hover:text-green-400">
           Quem Somos
         </a>
-        <button className="px-6 py-2 border-2 neon-border font-semibold rounded-lg transition neon-text">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://wa.link/r9j769"
+          className="px-6 py-2 border-2 neon-border font-semibold rounded-lg transition neon-text"
+        >
           Contato
-        </button>
+        </a>
       </nav>
     </header>
   );

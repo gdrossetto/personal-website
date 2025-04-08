@@ -21,6 +21,8 @@ export function Hero({ scrollToSection }) {
           <div className="mt-6 flex gap-4">
             <a
               href="https://wa.link/r9j769"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-3 border-2 neon-border font-semibold rounded-lg transition neon-text"
             >
               Entrar em Contato

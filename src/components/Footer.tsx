@@ -39,7 +39,12 @@ export const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="https://wa.link/r9j769" className="hover:text-green-400">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://wa.link/r9j769"
+                className="hover:text-green-400"
+              >
                 Contato
               </a>
             </li>
