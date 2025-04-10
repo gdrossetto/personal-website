@@ -63,6 +63,7 @@ export const Solutions = () => {
       <div className="flex flex-wrap justify-center gap-4">
         {features.map((feature, index) => (
           <div
+            data-aos="fade-up"
             key={index}
             className="flex flex-col items-center text-center neon-border-only w-full sm:w-2/5 lg:w-2/5 p-8"
           >

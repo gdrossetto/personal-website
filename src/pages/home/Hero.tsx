@@ -5,10 +5,10 @@ import animationData from "../../assets/animation.json";
 // @ts-expect-error
 export function Hero({ scrollToSection }) {
   return (
-    <section className="px-6 md:px-24 pt-12 pb-12  flex flex-col-reverse md:flex-row items-center justify-between bg-[#0A1124] text-white font-mono tracking-tight">
+    <section className="px-6 md:px-24 pt-12 pb-12  flex flex-col-reverse md:flex-row items-center justify-between bg-[#0A1124] text-white tracking-wide">
       <div className="w-full md:w-1/2 md:text-left">
         <div className="flex flex-col justify-center items-center text-center ">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white">
+          <h1 className="text-4xl md:text-6xl font-semibold text-white">
             <span className="neon-green">Soluções Digitais </span>
             para Impulsionar seu Negócio
           </h1>

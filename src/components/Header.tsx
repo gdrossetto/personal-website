@@ -7,7 +7,7 @@ export function Header() {
   const navigate = useNavigate();
 
   return (
-    <header className="bg-[#0A1124] flex justify-between items-center p-6 md:px-24 sticky top-0 z-50 border-b border-green-400 font-mono">
+    <header className="bg-[#0A1124] flex justify-between items-center p-6 md:px-24 sticky top-0 z-50 border-b border-green-400 titillium-web">
       {/* Logo */}
       <div
         className="neon-text font-bold cursor-pointer"

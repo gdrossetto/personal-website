@@ -40,7 +40,7 @@ const BlogCard = ({ post }: any) => {
         <div className="mt-auto">
           <a
             href={`/blog/${post.documentId}`}
-            className="text-green-500 font-medium hover:underline flex items-center gap-1"
+            className="neon-blue font-medium hover:underline flex items-center gap-1"
           >
             Ler mais
             <svg

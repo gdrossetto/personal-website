@@ -30,7 +30,7 @@ const Values = () => {
                 {service.title}
               </h3>
               <hr className="border-2 border-green-400 my-8 w-1/2" />
-              <p className="text-gray-600 font-normal text-lg md:text-2xl">
+              <p className="text-gray-600 font-normal text-lg md:text-xl">
                 {service.description}
               </p>
             </div>
