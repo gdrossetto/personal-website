@@ -26,9 +26,9 @@ const Values = () => {
               className="w-full md:w-1/2 object-cover rounded-lg"
             />
             <div className="w-full md:w-1/2 p-8">
-              <h3 className="text-3xl md:text-5xl font-bold mb-4 font-mono tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-semibold mb-4">
                 {service.title}
-              </h3>
+              </h2>
               <hr className="border-2 border-green-400 my-8 w-1/2" />
               <p className="text-gray-600 font-normal text-lg md:text-xl">
                 {service.description}

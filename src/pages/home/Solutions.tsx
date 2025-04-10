@@ -52,7 +52,7 @@ export const Solutions = () => {
       id="solucoes"
       className="bg-[#0A1124] text-center px-6 md:px-24 py-24"
     >
-      <h2 className="text-6xl font-bold text-white mb-4 font-mono tracking-tight">
+      <h2 className="text-6xl text-white mb-4 font-semibold">
         Nossas <span className="neon-text">Soluções_</span>
       </h2>
       <p className="text-white max-w-2xl mx-auto mb-12">

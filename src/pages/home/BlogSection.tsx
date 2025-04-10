@@ -38,7 +38,7 @@ const BlogSection = () => {
     // </section>
     <section className="py-18 bg-[#f7f9fc]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center">
-        <h2 className="text-6xl font-bold text-gray-900 font-mono tracking-tight mb-18 text-center">
+        <h2 className="text-6xl font-semibold text-gray-900 mb-18 text-center">
           Nossos Últimos <span className="neon-blue">Insights</span>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

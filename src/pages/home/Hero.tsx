@@ -5,7 +5,7 @@ import animationData from "../../assets/animation.json";
 // @ts-expect-error
 export function Hero({ scrollToSection }) {
   return (
-    <section className="px-6 md:px-24 pt-12 pb-12  flex flex-col-reverse md:flex-row items-center justify-between bg-[#0A1124] text-white tracking-wide">
+    <section className="px-6 md:px-24 pt-12 pb-12  flex flex-col-reverse md:flex-row items-center justify-between bg-[#0A1124] text-white">
       <div className="w-full md:w-1/2 md:text-left">
         <div className="flex flex-col justify-center items-center text-center ">
           <h1 className="text-4xl md:text-6xl font-semibold text-white">
@@ -36,12 +36,14 @@ export function Hero({ scrollToSection }) {
           </div>
         </div>
       </div>
-      <div className="w-full md:w-1/2">
-        <Lottie
-          className="w-full max-w-sm md:max-w-lg mx-auto"
-          animationData={animationData}
-          loop={true}
-        />
+      <div className="w-full md:w-1/2 flex justify-center items-center">
+        <div className="w-full max-w-sm md:max-w-lg h-[300px] md:h-[500px]">
+          <Lottie
+            className="w-full h-full"
+            animationData={animationData}
+            loop={true}
+          />
+        </div>
       </div>
     </section>
   );
