@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { Header } from "../../components/Header.tsx";
 import { Footer } from "../../components/Footer.tsx";
 import { adminBaseUrl } from "../../App.tsx";
 import parse from "html-react-parser";
+import { ArrowLeft } from "lucide-react";
 
 const BlogPostPage = () => {
   const { documentId } = useParams();
@@ -45,6 +46,16 @@ const BlogPostPage = () => {
     <>
       <Header />
       <article className="max-w-3xl mx-auto py-12 px-6">
+        <div className="mb-8">
+          <Link 
+            to="/blog" 
+            className="inline-flex items-center text-[#0A1124] hover:underline transition-colors"
+          >
+            <ArrowLeft className="mr-2 h-5 w-5" />
+            <span className="font-medium">Voltar para o blog</span>
+          </Link>
+        </div>
+        
         <h1 className="font-bold text-gray-900 font-mono text-5xl mb-4 tracking-tight">
           {post.titulo}
         </h1>
@@ -57,12 +68,6 @@ const BlogPostPage = () => {
         </p>
         <hr className="border-1 border-green-400 mt-8" />
         <div className="ck-content py-8">{parse(post.conteudo)}</div>
-        {/*<a*/}
-        {/*  href="/blog"*/}
-        {/*  className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"*/}
-        {/*>*/}
-        {/*  Voltar para o Blog*/}
-        {/*</a>*/}
       </article>
       <Footer />
     </>

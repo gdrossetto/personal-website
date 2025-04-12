@@ -48,34 +48,35 @@ export const Solutions = () => {
   ];
 
   return (
-    <section
-      id="solucoes"
-      className="bg-[#0A1124] text-center px-6 md:px-24 py-24"
-    >
-      <h2 className="text-6xl text-white mb-4 font-semibold">
-        Nossas <span className="neon-text">Soluções_</span>
-      </h2>
-      <p className="text-white max-w-2xl mx-auto mb-12">
-        Oferecemos uma ampla gama de serviços digitais para ajudar sua empresa a
-        prosperar online. De desenvolvimento web a estratégias digitais, temos
-        tudo o que você precisa.
-      </p>
-      <div className="flex flex-wrap justify-center gap-4">
-        {features.map((feature, index) => (
-          <div
-            data-aos="fade-up"
-            key={index}
-            className="flex flex-col items-center text-center neon-border-only w-full sm:w-2/5 lg:w-2/5 p-8"
-          >
-            <div className="bg-[#0A1124] p-4 rounded-full mb-4">
-              {feature.icon}
+    <section id="solucoes" className="bg-[#0A1124] text-white">
+      <div className=" mx-auto px-6 md:px-24 py-24">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-6xl font-semibold mb-6">
+            Nossas <span className="neon-text">Soluções_</span>
+          </h2>
+          <p className="text-white max-w-2xl mx-auto text-lg">
+            Oferecemos uma ampla gama de serviços digitais para ajudar sua empresa a
+            prosperar online. De desenvolvimento web a estratégias digitais, temos
+            tudo o que você precisa.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div
+              data-aos="fade-up"
+              key={index}
+              className="flex flex-col items-center text-center neon-border-only p-8 rounded-xl"
+            >
+              <div className="bg-[#0A1124] p-4 rounded-full mb-6">
+                {feature.icon}
+              </div>
+              <h3 className="text-2xl font-semibold neon-text mb-4">
+                {feature.title}
+              </h3>
+              <p className="text-white text-lg">{feature.description}</p>
             </div>
-            <h3 className="text-2xl font-semibold neon-text mb-2">
-              {feature.title}
-            </h3>
-            <p className="text-white">{feature.description}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
