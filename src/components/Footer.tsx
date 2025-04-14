@@ -59,13 +59,20 @@ export const Footer = () => {
           <ul className="mt-4 space-y-2">
             <li className="flex items-center gap-3">
               <FaWhatsapp className="text-green-400" />
-              <a href="https://wa.link/r9j769" className="hover:text-green-400">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://wa.link/r9j769"
+                className="hover:text-green-400"
+              >
                 WhatsApp
               </a>
             </li>
             <li className="flex items-center gap-3">
               <FaInstagram className="text-green-400" />
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.instagram.com/gr_websolutions"
                 className="hover:text-green-400"
               >
@@ -75,6 +82,8 @@ export const Footer = () => {
             <li className="flex items-center gap-3">
               <FaLinkedinIn className="text-green-400" />
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/company/gr-web-solution"
                 className="hover:text-green-400"
               >
