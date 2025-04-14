@@ -65,13 +65,19 @@ export const Footer = () => {
             </li>
             <li className="flex items-center gap-3">
               <FaInstagram className="text-green-400" />
-              <a href="#" className="hover:text-green-400">
+              <a
+                href="https://www.instagram.com/gr_websolutions"
+                className="hover:text-green-400"
+              >
                 Instagram
               </a>
             </li>
             <li className="flex items-center gap-3">
               <FaLinkedinIn className="text-green-400" />
-              <a href="#" className="hover:text-green-400">
+              <a
+                href="https://www.linkedin.com/company/gr-web-solution"
+                className="hover:text-green-400"
+              >
                 LinkedIn
               </a>
             </li>
