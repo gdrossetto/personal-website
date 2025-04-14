@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import gr from "../assets/GRlogo.png";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -6,12 +6,27 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const handleNavigation = (
     sectionId: string,
     e: React.MouseEvent<HTMLAnchorElement>
   ) => {
     e.preventDefault();
+    setIsOpen(false); // Close menu when a link is clicked
     if (location.pathname !== "/") {
       navigate("/");
       // Wait for navigation to complete before scrolling
@@ -50,6 +65,7 @@ export function Header() {
 
       {/* Navigation */}
       <nav
+        ref={menuRef}
         className={`${
           isOpen ? "flex border-b neon-border-only" : "hidden"
         } md:flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 
@@ -72,7 +88,7 @@ export function Header() {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://wa.link/r9j769"
+          href="https://wa.link/4kqjmf"
           className="px-6 py-2 border-2 neon-border font-semibold rounded-lg transition neon-text"
         >
           Contato

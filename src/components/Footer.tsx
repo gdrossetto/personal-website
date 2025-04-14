@@ -42,7 +42,7 @@ export const Footer = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://wa.link/r9j769"
+                href="https://wa.link/4kqjmf"
                 className="hover:text-green-400"
               >
                 Contato
@@ -62,7 +62,7 @@ export const Footer = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://wa.link/r9j769"
+                href="https://wa.link/4kqjmf"
                 className="hover:text-green-400"
               >
                 WhatsApp
