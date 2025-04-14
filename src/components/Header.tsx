@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import gr from "../assets/GRlogo.png";
 import { useNavigate, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,11 +57,11 @@ export function Header() {
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden neon-green focus:outline-none px-6"
+        className="md:hidden neon-green focus:outline-none p-2 hover:text-green-400 transition-colors duration-200"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle Menu"
       >
-        {isOpen ? "✖" : "☰"}
+        {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
       {/* Navigation */}
@@ -69,7 +70,7 @@ export function Header() {
         className={`${
           isOpen ? "flex border-b neon-border-only" : "hidden"
         } md:flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 
-    fixed md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-[#0A1124] md:bg-transparent p-6 md:p-0 z-40 px-6 md:px-24`}
+    fixed md:relative top-20 md:top-0 left-0 w-full md:w-auto bg-[#0A1124] md:bg-transparent p-6 md:p-0 z-40 px-6 md:px-24 mt-2`}
       >
         <a
           href="#solucoes"
