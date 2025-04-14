@@ -73,19 +73,20 @@ export function Header() {
     fixed md:relative top-20 md:top-0 left-0 w-full md:w-auto bg-[#0A1124] md:bg-transparent p-6 md:p-0 z-40 px-6 md:px-24 mt-2`}
       >
         <a
-          href="#solucoes"
-          onClick={(e) => handleNavigation("solucoes", e)}
-          className="text-white hover:text-green-400"
-        >
-          Soluções
-        </a>
-        <a
           href="#sobre"
           onClick={(e) => handleNavigation("sobre", e)}
           className="text-white hover:text-green-400"
         >
           Quem Somos
         </a>
+        <a
+          href="#solucoes"
+          onClick={(e) => handleNavigation("solucoes", e)}
+          className="text-white hover:text-green-400"
+        >
+          Soluções
+        </a>
+
         <a
           target="_blank"
           rel="noopener noreferrer"
