@@ -5,33 +5,39 @@ import animationData from "../../assets/animation.json";
 // @ts-expect-error
 export function Hero({ scrollToSection }) {
   return (
-    <section className="px-6 md:px-24 pt-12 pb-12  flex flex-col-reverse md:flex-row items-center justify-between bg-[#0A1124] text-white">
+    <section className="px-6 md:px-24 pt-12 pb-12 flex flex-col-reverse md:flex-row items-center justify-between bg-[#0A1124] text-white">
       <div className="w-full md:w-1/2 md:text-left">
-        <div className="flex flex-col justify-center items-center text-center ">
+        <div className="flex flex-col justify-center items-center text-center">
           <h1 className="text-4xl md:text-6xl font-semibold text-white">
-            <span className="neon-green">Soluções Digitais </span>
-            para Impulsionar seu Negócio
+            Hi, I'm <span className="neon-green">Gabriel Rossetto</span>
           </h1>
+          <h2 className="text-2xl md:text-3xl font-semibold text-white mt-4">
+            Software Engineer
+          </h2>
           <p className="text-gray-300 mt-6 text-lg max-w-2xl">
-            Com experiência adquirida em projetos de empresas globais como{" "}
-            <span className="neon-green"> Banco Itaú</span> e{" "}
-            <span className="neon-green"> Booking.com</span>, a GR Web Solutions
-            oferece soluções personalizadas para empresas de todos os tamanhos.
+            I build modern web applications with a focus on user experience and
+            performance. Specialized in React, TypeScript, and full-stack
+            development.
           </p>
           <div className="mt-6 flex gap-4">
             <a
-              href="https://wa.link/4kqjmf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                const section = document.getElementById("contact");
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
               className="px-6 py-3 border-2 neon-border font-semibold rounded-lg transition neon-text"
             >
-              Entrar em Contato
+              Get in Touch
             </a>
             <button
               onClick={() => scrollToSection()}
               className="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#0A1124] transition"
             >
-              Nossas Soluções
+              View Projects
             </button>
           </div>
         </div>

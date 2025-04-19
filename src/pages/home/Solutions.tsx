@@ -1,79 +1,72 @@
-import {
-  FileBox,
-  Building2,
-  BookOpenText,
-  ShoppingCart,
-  TrendingUp,
-  Wrench,
-} from "lucide-react";
+import { Code2, Database, Globe, Layout, Server, Terminal } from "lucide-react";
 
-export const Solutions = () => {
-  const features = [
+export const Projects = () => {
+  const projects = [
     {
-      icon: <FileBox className="text-green-400 w-10 h-10" />,
-      title: "Landing Pages Otimizadas",
+      icon: <Code2 className="text-green-400 w-10 h-10" />,
+      title: "Frontend Development",
       description:
-        "Criamos landing pages rápidas, responsivas e com alto foco em conversão, ideais para campanhas, produtos e geração de leads.",
+        "Building responsive and performant user interfaces using React, TypeScript, and modern CSS frameworks. Focus on creating intuitive and engaging user experiences.",
     },
     {
-      icon: <Building2 className="text-green-400 w-10 h-10" />,
-      title: "Sites Institucionais Profissionais",
+      icon: <Server className="text-green-400 w-10 h-10" />,
+      title: "Backend Development",
       description:
-        "Apresente sua empresa com um site moderno, responsivo e que transmita autoridade. Layouts personalizados e gestão fácil de conteúdo.",
+        "Developing robust server-side applications with Node.js, Express, and various databases. Implementing RESTful APIs and microservices architecture.",
     },
     {
-      icon: <BookOpenText className="text-green-400 w-10 h-10" />,
-      title: "Blogs Pessoais/Corporativos",
+      icon: <Database className="text-green-400 w-10 h-10" />,
+      title: "Database Design",
       description:
-        "Conecte-se com seu público por meio de conteúdo. Implementamos blogs com design integrado e foco em SEO.",
+        "Designing and implementing efficient database schemas, optimizing queries, and managing data relationships for scalable applications.",
     },
     {
-      icon: <ShoppingCart className="text-green-400 w-10 h-10" />,
-      title: "Lojas Virtuais Personalizadas",
+      icon: <Layout className="text-green-400 w-10 h-10" />,
+      title: "UI/UX Design",
       description:
-        "Desenvolvemos e-commerces com checkout seguro, integração com pagamentos e ferramentas de gestão de pedidos e estoque.",
+        "Creating modern and accessible user interfaces with a focus on user experience. Using design systems and component libraries for consistency.",
     },
     {
-      icon: <TrendingUp className="text-green-400 w-10 h-10" />,
-      title: "Otimização SEO",
+      icon: <Globe className="text-green-400 w-10 h-10" />,
+      title: "Web Performance",
       description:
-        "Aumente sua visibilidade no Google com otimizações técnicas, conteúdo estratégico e melhoria de performance.",
+        "Optimizing web applications for speed and efficiency. Implementing best practices for loading, rendering, and runtime performance.",
     },
     {
-      icon: <Wrench className="text-green-400 w-10 h-10" />,
-      title: "Manutenção e Suporte Técnico",
+      icon: <Terminal className="text-green-400 w-10 h-10" />,
+      title: "DevOps & CI/CD",
       description:
-        "Oferecemos planos de manutenção para manter seu site sempre atualizado, seguro e funcionando perfeitamente.",
+        "Setting up automated deployment pipelines, containerization with Docker, and implementing continuous integration practices.",
     },
   ];
 
   return (
-    <section id="solucoes" className="bg-[#0A1124] text-white">
-      <div className=" mx-auto px-6 md:px-24 py-24">
+    <section id="projects" className="bg-[#0A1124] text-white">
+      <div className="mx-auto px-6 md:px-24 py-24">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-6xl font-semibold mb-6">
-            Nossas <span className="neon-text">Soluções_</span>
+            My <span className="neon-text">Expertise_</span>
           </h2>
           <p className="text-white max-w-2xl mx-auto text-lg">
-            Oferecemos uma ampla gama de serviços digitais para ajudar sua empresa a
-            prosperar online. De desenvolvimento web a estratégias digitais, temos
-            tudo o que você precisa.
+            Specialized in full-stack development with a focus on modern web
+            technologies. Here are the key areas where I excel in software
+            development.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+          {projects.map((project, index) => (
             <div
               data-aos="fade-up"
               key={index}
               className="flex flex-col items-center text-center neon-border-only p-8 rounded-xl"
             >
               <div className="bg-[#0A1124] p-4 rounded-full mb-6">
-                {feature.icon}
+                {project.icon}
               </div>
               <h3 className="text-2xl font-semibold neon-text mb-4">
-                {feature.title}
+                {project.title}
               </h3>
-              <p className="text-white text-lg">{feature.description}</p>
+              <p className="text-white text-lg">{project.description}</p>
             </div>
           ))}
         </div>

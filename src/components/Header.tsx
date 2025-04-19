@@ -73,27 +73,32 @@ export function Header() {
     fixed md:relative top-20 md:top-0 left-0 w-full md:w-auto bg-[#0A1124] md:bg-transparent p-6 md:p-0 z-40 px-6 md:px-24 mt-2`}
       >
         <a
-          href="#sobre"
-          onClick={(e) => handleNavigation("sobre", e)}
+          href="#about"
+          onClick={(e) => handleNavigation("about", e)}
           className="text-white hover:text-green-400"
         >
-          Quem Somos
+          About
         </a>
         <a
-          href="#solucoes"
-          onClick={(e) => handleNavigation("solucoes", e)}
+          href="#projects"
+          onClick={(e) => handleNavigation("projects", e)}
           className="text-white hover:text-green-400"
         >
-          Soluções
+          Projects
         </a>
-
         <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://wa.link/4kqjmf"
+          href="#blog"
+          onClick={(e) => handleNavigation("blog", e)}
+          className="text-white hover:text-green-400"
+        >
+          Blog
+        </a>
+        <a
+          href="#contact"
+          onClick={(e) => handleNavigation("contact", e)}
           className="px-6 py-2 border-2 neon-border font-semibold rounded-lg transition neon-text"
         >
-          Contato
+          Contact
         </a>
       </nav>
     </header>
